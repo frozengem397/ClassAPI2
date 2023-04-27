@@ -133,7 +133,13 @@ public class PlanService {
     public void deletePlanClass(String userId, String courseId) throws NotFoundException {
         Optional<PlanCart> cart = planCartRepository.findPlanCartByUserId(userId);
         cart.get().delClass(courseId);
-        planCartRepository.save(cart.get());
+        if(cart.get().getPlanClasses().size() ==0){
+            planCartRepository.delete(cart.get());
+
+        } else{
+            planCartRepository.save(cart.get());
+
+        }
 
     }
 }
