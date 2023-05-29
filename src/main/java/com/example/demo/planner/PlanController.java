@@ -25,11 +25,6 @@ public class PlanController {
 
     private PlanService planService;
 
-    // @GetMapping
-    // public ResponseEntity<List<PlanCart>> getAll() {
-    //     return new ResponseEntity<>(planService.userCart(null),HttpStatus.OK);
-    // }
-
     @GetMapping
     public ResponseEntity<List<PlanCart>> getAll() {
         return new ResponseEntity<>(planService.getAll(),HttpStatus.OK);
@@ -37,14 +32,12 @@ public class PlanController {
 
     @GetMapping("/{userId}")
     public ResponseEntity<Optional<PlanCart>> getAllClasses(@PathVariable String userId) {
-        //System.out.println(planService.userCart(userId));
         return new ResponseEntity<Optional<PlanCart>>(planService.userCart(userId),HttpStatus.OK);
     }
 
     @PostMapping("/{userId}")
     public ResponseEntity register(@RequestBody PlanClass course, @PathVariable String userId) throws NotFoundException {
         try {
-            //System.out.println(course);
             return new ResponseEntity<>(planService.createCartPlanClass(course,userId), HttpStatus.OK);
         }
         catch (NotFoundException e){

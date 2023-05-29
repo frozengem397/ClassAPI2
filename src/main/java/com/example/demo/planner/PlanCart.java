@@ -21,7 +21,6 @@ public class PlanCart {
     @Id
     private ObjectId id;
     private String userId;
-    //private List<PlanClass> planClasses;
     private Integer total;
     private HashMap<String, PlanClass> planClasses;
 
@@ -32,10 +31,9 @@ public class PlanCart {
     }
 
     public void addNew(PlanClass newClass) {
-        this.planClasses.put(newClass.getCourseId(),newClass);
-    
-        
+        this.planClasses.put(newClass.getCourseId(),newClass);         
     };
+
     public void delClass(String courseId) {
         this.planClasses.remove(courseId);
     };

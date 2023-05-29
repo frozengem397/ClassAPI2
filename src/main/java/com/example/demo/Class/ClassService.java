@@ -34,7 +34,6 @@ public class ClassService {
         }
         Class n_class = new Class(newCourse);
         classRepository.insert(n_class);
-        //mongoTemplate.update(Class.class).matching(Criteria.where("courseId").is(newCourse.getCourseId())).apply(new Update().push(""))
         return n_class;
     }
 

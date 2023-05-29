@@ -14,26 +14,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//@Document(collection = "plan")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
 public class PlanClass {
     
-    //private String id;
+    
     private String courseId;
     private String title;
     private String term;
-    //private PlanCart cart;
-    
 
     public PlanClass(PlanClass newPlan){
-        //this.id = newPlan.id;
         this.courseId = newPlan.courseId;
         this.title = newPlan.title;
         this.term = newPlan.term;
-        //this.cart = newPlan.cart;
     }
     
 }

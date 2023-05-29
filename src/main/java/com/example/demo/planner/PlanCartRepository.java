@@ -9,9 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PlanCartRepository extends MongoRepository<PlanCart, ObjectId> {
-    //List<PlanClass> findAllByTerm(String term);
     Optional<PlanCart> findPlanCartByUserId(String userId);
-    //HashMap<String, String> findPlanClassesByUserId(String userId);
-    //Optional<PlanClass> findPlanClassByTitle(String title);
-    //Optional<PlanClass> findPlanClassByCourseId(String id);
+
 }
