@@ -5,6 +5,8 @@ This project is a small class registration web application API developed using J
 The application provides API endpoints to manage classes and plans. Users can perform various operations such as retrieving all classes, retrieving a single class by its ID, creating a new class, updating an existing class, deleting a class, retrieving all plans, getting a user's plan, registering for a class, and deleting a class from a plan.
 
 The API is deployed on Azure and can be accessed using the following base URLs:
+
+
 **_Due to the Azure account issue, I no longer pay for the monthly fee (over 100$), so the link might not be able to be open._**
 
 - Class API: [https://kimclass.azurewebsites.net/api/v1/classes](https://kimclass.azurewebsites.net/api/v1/classes)
